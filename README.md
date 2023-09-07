@@ -34,3 +34,17 @@ commit changes:
 ```shell
 yarn commit
 ```
+
+## Design
+
+### home Page
+
+![sales-homepage](./docs/sales-homepage.drawio.svg)
+
+### Product Slug
+
+![sales-product-slug](./docs/sales-product.drawio.svg)
+
+### Favorites
+
+![sales-favorites](./docs/sales-favorites.drawio.svg)
