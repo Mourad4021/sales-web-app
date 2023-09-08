@@ -48,3 +48,19 @@ yarn commit
 ### Favorites
 
 ![sales-favorites](./docs/sales-favorites.drawio.svg)
+
+## Folder Structure
+
+Designes talk about screen, developers tend to use router. We will use a naming nomenclature as follow:
+
+```
+/src
+  /home
+    /HomePage
+  /contacts
+    /ContactsPage
+    /ContactPage
+  /counters
+    /CountersPage
+
+```
