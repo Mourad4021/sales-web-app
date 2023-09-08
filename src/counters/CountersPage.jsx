@@ -1,3 +1,12 @@
+import Counter from "./Counter";
+
 export default function CountersPage() {
-  return <div>CountersPage</div>;
+  return (
+    <>
+      <h1>CountersPage</h1>
+      <Counter />
+      <Counter initialValue={42} />
+      <Counter initialValue={10} step={5} />
+    </>
+  );
 }

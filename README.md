@@ -62,5 +62,9 @@ Designes talk about screen, developers tend to use router. We will use a naming 
     /ContactPage
   /counters
     /CountersPage
+  /hooks
+    index.js          # should only be use as index
+    /useCounter
+
 
 ```
