@@ -21,13 +21,22 @@ Run the server:
 yarn dev
 ```
 
+Maybe you want to run an api
+
+```shell
+yarn dev:api
+```
+
+````
+
+```shell
 Make your changes.
 
 Test it!
 
 ```shell
 yarn test
-```
+````
 
 commit changes:
 
