@@ -11,4 +11,11 @@ export const theme = createTheme({
       textTransform: "none",
     },
   },
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: "outlined",
+      },
+    },
+  },
 });

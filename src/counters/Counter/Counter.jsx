@@ -23,7 +23,7 @@ export default function Counter({ initialValue = 0, step = 1, counterId }) {
           <Button variant="contained" onClick={increment}>
             +{step}
           </Button>
-          <Button variant="outlined">{counter}</Button>
+          <Button>{counter}</Button>
           <Button variant="contained" onClick={decrement}>
             -{step}
           </Button>
