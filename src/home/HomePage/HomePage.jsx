@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, LinearProgress } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { ProductCondition } from "../ProductCondition";
 import { withRow } from "../../hoc";
@@ -10,7 +10,7 @@ import { useProducts } from "../../hooks";
 export default function HomePage() {
   const { isLoading, error, data: products } = useProducts();
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <LinearProgress />;
   if (error) return "An error has occurred: " + error.message;
   const productsColumns = [
     {
