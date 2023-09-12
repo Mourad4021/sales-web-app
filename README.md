@@ -64,6 +64,10 @@ Designes talk about screen, developers tend to use router. We will use a naming 
 
 ```
 /src
+  /ds/                    # Atomic Design approach
+    /atoms
+      index.js            # should only be use as indexation file
+      /Price              # Component to he reused
   /home
     /HomePage
       index.js
@@ -77,6 +81,9 @@ Designes talk about screen, developers tend to use router. We will use a naming 
     /ContactPage
   /counters
     /CountersPage
+  /hoc
+    index.js
+    /withRow
   /hooks
     index.js               # should only be use as indexation file
     /useCounter

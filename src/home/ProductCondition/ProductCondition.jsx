@@ -1,3 +1,4 @@
+import { Chip } from "@mui/material";
 import { oneOf } from "prop-types";
 
 /**
@@ -8,7 +9,12 @@ import { oneOf } from "prop-types";
  * @returns {React.ReactElement}
  */
 export default function ProductCondition({ condition }) {
-  return condition === "new" ? "Neuf" : "Occasion";
+  return (
+    <Chip
+      label={condition === "new" ? "Neuf" : "Occasion"}
+      color={condition === "new" ? "primary" : "secondary"}
+    />
+  );
 }
 
 ProductCondition.propTypes = {
