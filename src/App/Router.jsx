@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { HomePage } from "../home/HomePage";
-import { CountersPage } from "../counters/CountersPage";
+
 import { MainTemplate } from "../ds/templates";
+import CountersPage from "../counters/CountersPage/CountersPage";
 
 export const Router = createBrowserRouter([
   {

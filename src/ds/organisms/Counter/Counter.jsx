@@ -1,5 +1,5 @@
 import { number } from "prop-types";
-import { useCounter } from "../../hooks";
+import { useCounter } from "../../../hooks";
 import { Button, ButtonGroup, Card, Chip } from "@mui/material";
 import { CardContent } from "./styles";
 import SpeedIcon from "@mui/icons-material/Speed";
