@@ -8,7 +8,10 @@ import { ProductPrice } from "../ProductPrice";
 import { useProducts } from "../../hooks";
 
 export default function HomePage() {
-  const { products } = useProducts();
+  const { isLoading, error, data: products } = useProducts();
+
+  if (isLoading) return "Loading...";
+  if (error) return "An error has occurred: " + error.message;
   const productsColumns = [
     {
       field: "imageUrl",
