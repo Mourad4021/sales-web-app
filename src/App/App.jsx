@@ -3,7 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import { theme } from "./theme";
 import { Router } from "./Router";
-import { QueryClientProvider } from "react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./queryClient";
 
 export default function App() {
