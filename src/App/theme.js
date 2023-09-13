@@ -7,6 +7,9 @@ import "@fontsource/roboto/700.css";
 
 export const theme = createTheme({
   typography: {
+    h1: {
+      fontSize: "2rem",
+    },
     button: {
       textTransform: "none",
     },

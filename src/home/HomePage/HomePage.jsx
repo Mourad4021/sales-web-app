@@ -10,12 +10,15 @@ import {
   TextField,
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { ProductCondition } from "../ProductCondition";
+
 import { withRow } from "../../hoc";
-import { ProductImage } from "../ProductImage";
-import { ProductDescription } from "../ProductDescription";
-import { ProductPrice } from "../ProductPrice";
+
+import { ProductDescription } from "../../products/ProductDescription";
+
 import { useCondition, useProducts } from "../../hooks";
+import { ProductImage } from "../../products/ProductImage";
+import { ProductPrice } from "../../products/ProductPrice";
+import { ProductCondition } from "../../products/ProductCondition";
 
 export default function HomePage() {
   const [condition, setCondition] = useCondition();

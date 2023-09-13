@@ -87,6 +87,8 @@ Designes talk about screen, developers tend to use router. We will use a naming 
   /hooks
     index.js               # should only be use as indexation file
     /useCounter
-
-
 ```
+
+## Requests
+
+To handle all our requests we use a proxy over [axios](https://github.com/axios/axios#readme) named [salesHttpClient](./src/salesHttpClient/index.js).
