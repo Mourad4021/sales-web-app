@@ -6,6 +6,7 @@ import { MainTemplate } from "../ds/templates";
 import CountersPage from "../counters/CountersPage/CountersPage";
 import ProductPage from "../products/ProductPage/ProductPage";
 import { ProjectsPage } from "../projects/ProjectsPage";
+import { FavoritesPage } from "../products/FavoritesPage";
 
 export const Router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const Router = createBrowserRouter([
       {
         path: "counters",
         element: <CountersPage />,
+      },
+      {
+        path: "favorites",
+        element: <FavoritesPage />,
       },
       {
         path: "products/:id",

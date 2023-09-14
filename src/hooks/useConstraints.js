@@ -3,23 +3,23 @@ import { useReducer } from "react";
 const initialConstraintsState = (constraints) =>
   Object.fromEntries(constraints.map(({ name }) => [name, false]));
 
-const constraintsReducer = (state, action) => {
+const constraintsReducer = (CONSTRAINTS_TYPES, state, action) => {
   switch (action.type) {
-    case "TOGGLE_COST":
+    case CONSTRAINTS_TYPES.cost:
       return {
         ...state,
         cost: !state.cost,
         scope: state.cost ? false : state.scope,
         time: !state.cost ? true : state.time,
       };
-    case "TOGGLE_SCOPE":
+    case CONSTRAINTS_TYPES.scope:
       return {
         ...state,
         scope: !state.scope,
         cost: !state.scope ? true : state.cost,
         time: state.scope ? false : state.time,
       };
-    case "TOGGLE_TIME":
+    case CONSTRAINTS_TYPES.time:
       return {
         ...state,
         time: !state.time,
@@ -34,7 +34,7 @@ export default function useConstraints(constraints) {
     constraints.map(({ name }) => [name, `TOGGLE_${name.toUpperCase()}`]),
   );
   const [constraintsState, dispatch] = useReducer(
-    constraintsReducer,
+    (state, action) => constraintsReducer(CONSTRAINTS_TYPES, state, action),
     initialConstraintsState(constraints),
   );
 

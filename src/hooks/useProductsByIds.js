@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { salesHttpClient } from "../salesHttpClient";
 
-export default function useProducts({ condition } = {}) {
+export default function useProductsByIds({ ids } = {}) {
   const searchParams = new URLSearchParams();
-  if (condition) searchParams.set("condition", condition);
+  ids.forEach((id) => searchParams.append("id", id));
 
-  return useQuery(["products", { condition }], async () => {
+  return useQuery(["products", { ids }], async () => {
     const response = await salesHttpClient.get(`/products?${searchParams}`);
-    return response.data;
+    return ids.length > 0 ? response.data : [];
   });
 }

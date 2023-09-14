@@ -9,3 +9,4 @@ export { default as useProducts } from "./useProducts";
 export { default as useCondition } from "./useCondition";
 export { default as useProduct } from "./useProduct";
 export { default as useConstraints } from "./useConstraints";
+export { default as useProductsByIds } from "./useProductsByIds";

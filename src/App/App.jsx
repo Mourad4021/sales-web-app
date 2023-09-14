@@ -5,14 +5,17 @@ import { theme } from "./theme";
 import { Router } from "./Router";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./queryClient";
+import { FavoritesContext } from "../contexts";
 
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <RouterProvider router={Router} />;
-      </ThemeProvider>
+      <FavoritesContext.Provider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <RouterProvider router={Router} />;
+        </ThemeProvider>
+      </FavoritesContext.Provider>
     </QueryClientProvider>
   );
 }
